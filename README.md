@@ -8,8 +8,8 @@ Site web statique pour un restaurant local présentant les menus hebdomadaires.
 
 ```bash
 # Cloner le projet
-git clone https://github.com/votre-username/mrs-restaurant.git
-cd mrs-restaurant
+git clone https://github.com/nezzeur/Site_Restaurant.git
+cd Site_Restaurant
 
 # Installer Hugo (si pas déjà fait)
 # macOS
