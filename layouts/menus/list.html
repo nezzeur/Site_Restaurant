@@ -1,0 +1,34 @@
+{{ define "title" }}Tous les menus - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="flex flex-wrap justify-between gap-3 p-4">
+    <h1 class="text-orange tracking-light text-[32px] font-bold leading-tight min-w-72">Tous les menus</h1>
+</div>
+
+<div class="px-4 py-4">
+    <p class="text-secondary mb-6">Retrouvez ici tous nos menus de la semaine.</p>
+
+    {{ range .Pages }}
+    <div class="card hover-lift mb-6">
+        <h3 class="text-primary text-xl font-bold mb-2">
+            <a href="{{ .Permalink }}" class="hover:text-orange transition-colors duration-300">{{ .Title }}</a>
+        </h3>
+
+        {{ if .Params.week_start }}
+        <p class="text-secondary text-sm mb-3">Semaine du {{ .Params.week_start }} au {{ .Params.week_end }}</p>
+        {{ end }}
+
+        <p class="text-primary text-sm mb-4">{{ .Summary }}</p>
+
+        <a href="{{ .Permalink }}"
+           class="btn-orange inline-flex items-center justify-center rounded-full h-8 px-4 text-xs font-bold leading-normal tracking-[0.015em]">
+            Voir le menu
+        </a>
+    </div>
+    {{ else }}
+    <div class="text-center py-8">
+        <p class="text-secondary">Aucun menu disponible pour le moment.</p>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

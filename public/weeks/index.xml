@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Weeks on MRS Restaurant</title>
+    <link>https://mrss-33d14.web.app/weeks/</link>
+    <description>Recent content in Weeks on MRS Restaurant</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <atom:link href="https://mrss-33d14.web.app/weeks/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="flex flex-wrap justify-between gap-3 p-4">
+    <h1 class="text-orange tracking-light text-[32px] font-bold leading-tight min-w-72">{{ .Title }}</h1>
+</div>
+
+<div class="px-4 py-6">
+    {{ .Content }}
+
+    <div class="grid gap-6">
+        {{ range .Pages }}
+        <div class="border border-[#f4f2f1] rounded-lg p-6">
+            <h2 class="text-primary text-xl font-bold mb-2">
+                <a href="{{ .Permalink }}" class="hover:underline hover:text-orange">{{ .Title }}</a>
+            </h2>
+            {{ if .Date }}
+            <p class="text-secondary text-sm mb-3">{{ .Date.Format "2 January 2006" }}</p>
+            {{ end }}
+            {{ if .Summary }}
+            <p class="text-primary mb-4">{{ .Summary }}</p>
+            {{ end }}
+            <a href="{{ .Permalink }}" class="btn-orange inline-flex items-center justify-center rounded-full h-10 px-6 text-sm font-bold">
+                Lire la suite
+            </a>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+          href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;700;800">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <style>
+        /* Styles pour le menu de la semaine avec couleur orange #f53c28 */
+
+        /* Curseurs pour éléments cliquables */
+        a, button, [role="button"], .cursor-pointer {
+            cursor: pointer !important;
+        }
+
+        a:hover, button:hover, [role="button"]:hover {
+            cursor: pointer !important;
+        }
+
+        /* Texte du header en orange */
+        header h2,
+        header a {
+            color: #f53c28 !important;
+        }
+
+        /* Logo/icône en orange */
+        header .size-4 svg {
+            color: #f53c28 !important;
+            fill: #f53c28 !important;
+        }
+
+        /* Titre principal "Menu de la semaine" en orange */
+        .layout-content-container p[class*="text-[32px]"] {
+            color: #f53c28 !important;
+        }
+
+        /* Alternative pour cibler plus spécifiquement le titre */
+        p.text-\[32px\] {
+            color: #f53c28 !important;
+        }
+
+        /* Tous les jours de la semaine (h3) en orange */
+        h3 {
+            color: #f53c28 !important;
+        }
+
+        /* Exception : "Semaine du XX au XX" reste noir */
+        h3:first-of-type {
+            color: #161412 !important;
+        }
+
+        /* Texte du footer en orange */
+        footer p,
+        footer a {
+            color: #f53c28 !important;
+        }
+
+        /* Styles de survol pour les liens du header */
+        header a:hover {
+            color: #e02c1a !important;
+            text-decoration: underline;
+            cursor: pointer !important;
+        }
+
+        /* Styles de survol pour les liens du footer */
+        footer a:hover {
+            color: #e02c1a !important;
+            text-decoration: underline;
+            cursor: pointer !important;
+        }
+
+        /* Amélioration visuelle : bordure orange légère pour le header */
+        header {
+            border-bottom: 2px solid #f53c28 !important;
+        }
+
+        /* Style alternatif pour les boutons de navigation (flèches) */
+        button[class*="bg-[#f4f2f1]"] {
+            background-color: #f53c28 !important;
+            color: white !important;
+            cursor: pointer !important;
+        }
+
+        button[class*="bg-[#f4f2f1]"]:hover {
+            background-color: #e02c1a !important;
+            cursor: pointer !important;
+        }
+
+        /* Boutons avec fond orange */
+        .btn-orange {
+            background-color: #f53c28 !important;
+            color: white !important;
+            cursor: pointer !important;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-orange:hover {
+            background-color: #e02c1a !important;
+            cursor: pointer !important;
+        }
+
+        /* Logo cliquable */
+        .logo-link {
+            cursor: pointer !important;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-link:hover {
+            opacity: 0.8;
+            cursor: pointer !important;
+        }
+    </style>
+
+    {{ block "head" . }}{{ end }}
+</head>
+<body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+         style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Header avec menu dynamique -->
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4f2f1] px-10 py-3">
+                <div class="flex items-center gap-4 text-[#161412]">
+                    <div class="w-16 h-16">
+                        <a href="{{ .Site.BaseURL }}" class="logo-link">
+                            <img src="{{ .Site.Params.logo }}" alt="Logo MRS"
+                                 style="width: 100%; height: 100%; object-fit: contain; border-radius: 6px;">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-1 justify-end gap-8">
+                    <div class="flex items-center gap-9">
+                        {{ range .Site.Menus.main }}
+                        <a class="text-[#161412] text-sm font-medium leading-normal hover:underline {{ if $.IsMenuCurrent "main" . }}font-bold{{ end }}"
+                           href="{{ .URL }}">{{ .Name }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+            </header>
+
+            <!-- Contenu principal -->
+            <main class="px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    {{ block "main" . }}{{ end }}
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="flex justify-center">
+                <div class="flex max-w-[960px] flex-1 flex-col">
+                    <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+                        <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                            <p class="text-[#81766a] text-base font-normal leading-normal">© {{ now.Format "2006" }} MRS.</p>
+                        </div>
+                        <a class="text-[#81766a] text-base font-normal leading-normal min-w-40 hover:text-[#f53c28] transition-colors duration-300" href="/legal/">Mention légale</a>
+                    </footer>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

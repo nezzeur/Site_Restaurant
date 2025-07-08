@@ -1,0 +1,489 @@
+{{ define "title" }}{{ .Site.Title }} - Accueil{{ end }}
+
+{{ define "main" }}
+<div class="flex flex-wrap justify-between gap-3 p-4">
+    <h1 class="text-orange tracking-light text-[32px] font-bold leading-tight min-w-72">Menu de la semaine</h1>
+</div>
+
+<!-- Section Menu -->
+<div class="px-4 py-6">
+    <!-- Navigation par semaine -->
+    <div class="flex justify-between items-center mb-6">
+        <button id="prev-week" class="nav-button flex items-center gap-2 p-3 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+        </button>
+
+        <div id="current-week" class="text-lg font-bold text-primary">
+            Menu de la semaine
+        </div>
+
+        <button id="next-week" class="nav-button flex items-center gap-2 p-3 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414z" clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Contenu du menu -->
+    <div id="menu-content" class="bg-[#f9f8f7] rounded-lg p-6">
+        <p class="text-primary">Chargement des menus...</p>
+    </div>
+</div>
+
+<!-- Données JSON pour tous les menus (Fixed JSON encoding) -->
+{{ $menuPages := where .Site.RegularPages "Section" "menus" }}
+{{ range $menuPages }}
+<script type="application/json" data-menu>
+    {
+        "title": {{ .Title | jsonify }},
+    "weekStart": {{ .Params.week_start | jsonify }},
+    "weekEnd": {{ .Params.week_end | jsonify }},
+    "date": {{ .Date.Format "2006-01-02" | jsonify }},
+    "weeklyMenu": {{ .Params.weekly_menu | jsonify }},
+    "section": {{ .Section | jsonify }},
+    "type": {{ .Type | jsonify }}
+    }
+</script>
+{{ end }}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Configuration
+        const ORDERED_DAYS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi"];
+        const MEAL_TYPES = {
+            "entrée": "🥗",
+            "plat": "🍽️",
+            "dessert": "🍰"
+        };
+
+        // Éléments du DOM
+        const currentWeekDisplay = document.getElementById('current-week');
+        const menuContent = document.getElementById('menu-content');
+        const prevBtn = document.getElementById('prev-week');
+        const nextBtn = document.getElementById('next-week');
+
+        // Fonctions utilitaires
+        const formatDate = (dateStr) => {
+            if (!dateStr) return '';
+            // Nettoyer les guillemets si présents
+            const cleanDateStr = dateStr.replace(/^"(.*)"$/, '$1');
+            const date = new Date(cleanDateStr);
+            if (isNaN(date.getTime())) return cleanDateStr;
+            return date.toLocaleDateString('fr-FR', {
+                day: '2-digit',
+                month: 'long'
+            });
+        };
+
+        const capitalize = (str) => {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        };
+
+        const isCurrentWeek = (startDate, endDate) => {
+            const today = new Date();
+            const start = new Date(startDate);
+            const end = new Date(endDate);
+
+            // Extend end date to include the full day
+            end.setHours(23, 59, 59, 999);
+
+            return today >= start && today <= end;
+        };
+
+        // Charger les menus
+        console.log('🔍 Recherche des éléments de menu...');
+        const menuElements = document.querySelectorAll('script[type="application/json"][data-menu]');
+        console.log('📊 Éléments trouvés:', menuElements.length);
+
+        const menus = Array.from(menuElements).map((el, index) => {
+            try {
+                const data = JSON.parse(el.textContent);
+                console.log(`📋 Menu ${index + 1}:`, data);
+                return data;
+            } catch (e) {
+                console.error(`❌ Erreur de parsing JSON pour le menu ${index + 1}:`, e);
+                return null;
+            }
+        }).filter(menu => menu !== null);
+
+        console.log('✅ Menus valides:', menus.length);
+
+        if (menus.length === 0) {
+            menuContent.innerHTML = `
+            <div class="text-primary p-4 bg-white rounded-lg">
+                <p><strong>❌ Aucun menu disponible.</strong></p>
+                <p class="text-sm mt-2">Vérifiez que :</p>
+                <ul class="text-sm mt-1 ml-4">
+                    <li>• Les fichiers sont dans <code>content/menus/</code></li>
+                    <li>• Le front matter contient <code>weekly_menu</code></li>
+                    <li>• Les fichiers ne sont pas en <code>draft: true</code></li>
+                </ul>
+            </div>
+        `;
+            return;
+        }
+
+        // Tri des menus par date (plus récent d'abord)
+        menus.sort((a, b) => {
+            const dateA = new Date(a.weekStart || a.date);
+            const dateB = new Date(b.weekStart || b.date);
+            return dateB - dateA; // Tri décroissant
+        });
+
+        // Trouver l'index du menu actuel
+        let currentIndex = 0;
+        for (let i = 0; i < menus.length; i++) {
+            if (menus[i].weekStart && menus[i].weekEnd) {
+                if (isCurrentWeek(menus[i].weekStart, menus[i].weekEnd)) {
+                    currentIndex = i;
+                    break;
+                }
+            }
+        }
+
+        // Rendu du menu amélioré
+        function renderMenu() {
+            const menu = menus[currentIndex];
+
+            // Parse weekly menu if it's a string
+            let weeklyMenu = menu.weeklyMenu;
+            if (typeof weeklyMenu === 'string') {
+                try {
+                    weeklyMenu = JSON.parse(weeklyMenu);
+                } catch (e) {
+                    console.error('Erreur parsing weekly_menu:', e);
+                    weeklyMenu = {};
+                }
+            }
+
+            // Titre de la semaine avec indicateur si c'est la semaine actuelle
+            let weekTitle = 'Menu de la semaine';
+            let currentWeekIndicator = '';
+
+            if (menu.weekStart && menu.weekEnd) {
+                const isThisWeek = isCurrentWeek(menu.weekStart, menu.weekEnd);
+                weekTitle = `Du ${formatDate(menu.weekStart)} au ${formatDate(menu.weekEnd)}`;
+                if (isThisWeek) {
+                    currentWeekIndicator = ' <span class="current-week-badge">📅 Semaine actuelle</span>';
+                }
+            } else if (menu.title) {
+                weekTitle = menu.title;
+            }
+
+            currentWeekDisplay.innerHTML = weekTitle + currentWeekIndicator;
+
+            // Contenu du menu amélioré
+            let html = '';
+
+            if (Object.keys(weeklyMenu).length > 0) {
+                html += '<div class="grid gap-4">';
+
+                ORDERED_DAYS.forEach(day => {
+                    const meals = weeklyMenu[day];
+
+                    if (meals && Array.isArray(meals) && meals.length > 0) {
+                        html += `
+                        <div class="day-card bg-white p-4 rounded-lg shadow-sm">
+                            <h3 class="day-title text-lg font-bold mb-3 border-b pb-2">${capitalize(day)}</h3>
+                            <div class="meals-container">
+                                ${meals.map((meal, i) => `
+                                    <div class="meal-item">
+                                        <span class="meal-number">${i + 1}.</span>
+                                        <span class="meal-text">${meal || ''}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                    }
+                });
+
+                html += '</div>';
+            } else {
+                html = `
+                <div class="text-primary p-4 bg-white rounded-lg">
+                    <p><strong>⚠️ Aucun détail de menu disponible pour cette semaine.</strong></p>
+                    <p class="text-sm mt-2">Menu: ${menu.title}</p>
+                </div>
+            `;
+            }
+
+            menuContent.innerHTML = html;
+            updateButtons();
+        }
+
+        function updateButtons() {
+            const isFirst = currentIndex === 0;
+            const isLast = currentIndex === menus.length - 1;
+
+            // Semaine précédente = plus ancienne (index plus grand)
+            prevBtn.disabled = isLast;
+            // Semaine suivante = plus récente (index plus petit)
+            nextBtn.disabled = isFirst;
+
+            prevBtn.classList.toggle('opacity-50', isLast);
+            prevBtn.classList.toggle('cursor-not-allowed', isLast);
+            nextBtn.classList.toggle('opacity-50', isFirst);
+            nextBtn.classList.toggle('cursor-not-allowed', isFirst);
+        }
+
+        // Navigation corrigée
+        // Semaine précédente = plus ancienne dans le temps (index plus grand)
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex < menus.length - 1) {
+                currentIndex++;
+                renderMenu();
+            }
+        });
+
+        // Semaine suivante = plus récente dans le temps (index plus petit)
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderMenu();
+            }
+        });
+
+        // Rendu initial
+        renderMenu();
+    });
+</script>
+
+<style>
+    :root {
+        --color-orange: #f33c2b;
+        --color-orange-hover: #d32f2f;
+        --color-primary: #333;
+        --color-secondary: #666;
+        --color-success: #22c55e;
+    }
+
+    .text-orange {
+        color: var(--color-orange);
+    }
+
+    .text-primary {
+        color: var(--color-primary);
+    }
+
+    .text-secondary {
+        color: var(--color-secondary);
+    }
+
+    .nav-button {
+        background-color: var(--color-orange);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 9999px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s;
+        cursor: pointer;
+        gap: 0.5rem;
+    }
+
+    .nav-button:hover:not(:disabled) {
+        background-color: var(--color-orange-hover);
+        transform: translateY(-1px);
+    }
+
+    .nav-button:disabled {
+        background-color: #e0e0e0;
+        cursor: not-allowed;
+        opacity: 0.7;
+        transform: none;
+    }
+
+    .day-title {
+        color: var(--color-orange);
+        text-transform: capitalize;
+    }
+
+    .day-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-left: 4px solid var(--color-orange);
+    }
+
+    .day-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .meals-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .meal-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        background-color: #f9f9f9;
+        border-radius: 0.375rem;
+        transition: background-color 0.2s;
+    }
+
+    .meal-item:hover {
+        background-color: #f3f4f6;
+    }
+
+    .meal-number {
+        font-weight: bold;
+        color: var(--color-orange);
+        min-width: 1.5rem;
+    }
+
+    .meal-text {
+        flex: 1;
+        color: var(--color-primary);
+    }
+
+    .current-week-badge {
+        background-color: var(--color-success);
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin-left: 1rem;
+    }
+
+    /* Utility classes */
+    .flex {
+        display: flex;
+    }
+
+    .items-center {
+        align-items: center;
+    }
+
+    .justify-between {
+        justify-content: space-between;
+    }
+
+    .gap-3 {
+        gap: 0.75rem;
+    }
+
+    .gap-4 {
+        gap: 1rem;
+    }
+
+    .p-4 {
+        padding: 1rem;
+    }
+
+    .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .py-6 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .mb-6 {
+        margin-bottom: 1.5rem;
+    }
+
+    .mb-3 {
+        margin-bottom: 0.75rem;
+    }
+
+    .rounded-lg {
+        border-radius: 0.5rem;
+    }
+
+    .shadow-sm {
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    }
+
+    .grid {
+        display: grid;
+    }
+
+    .bg-white {
+        background-color: white;
+    }
+
+    .border-b {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .pb-2 {
+        padding-bottom: 0.5rem;
+    }
+
+    .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+
+    .font-bold {
+        font-weight: 700;
+    }
+
+    .min-w-72 {
+        min-width: 18rem;
+    }
+
+    .tracking-light {
+        letter-spacing: 0.025em;
+    }
+
+    .leading-tight {
+        line-height: 1.25;
+    }
+
+    .opacity-50 {
+        opacity: 0.5;
+    }
+
+    .cursor-not-allowed {
+        cursor: not-allowed;
+    }
+
+    .bg-[#f9f8f7] {
+        background-color: #f9f8f7;
+    }
+
+    .text-xs {
+        font-size: 0.75rem;
+    }
+
+    .text-sm {
+        font-size: 0.875rem;
+    }
+
+    .mt-1 {
+        margin-top: 0.25rem;
+    }
+
+    .mt-2 {
+        margin-top: 0.5rem;
+    }
+
+    .ml-4 {
+        margin-left: 1rem;
+    }
+
+    .rounded {
+        border-radius: 0.25rem;
+    }
+
+    code {
+        background-color: #f3f4f6;
+        padding: 0.125rem 0.25rem;
+        border-radius: 0.125rem;
+        font-size: 0.875rem;
+    }
+
+</style>
+{{ end }}

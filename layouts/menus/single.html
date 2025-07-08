@@ -1,0 +1,82 @@
+{{ define "title" }}{{ .Site.Title }} - {{ .Title }}{{ end }}
+
+{{ define "main" }}
+<div class="flex flex-wrap justify-between gap-3 p-4">
+    <h1 class="text-orange tracking-light text-[32px] font-bold leading-tight min-w-72">{{ .Title }}</h1>
+</div>
+
+{{ if .Params.week_start }}
+<h3 class="date-range text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
+    Semaine du {{ .Params.week_start }} au {{ .Params.week_end }}
+</h3>
+{{ end }}
+
+<!-- Navigation semaines -->
+<div class="flex justify-stretch">
+    <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-between">
+        {{ if .PrevInSection }}
+        <a href="{{ .PrevInSection.Permalink }}"
+           class="btn-orange flex min-w-[84px] max-w-[480px] items-center justify-center overflow-hidden rounded-full h-10 px-4 text-sm font-bold leading-normal tracking-[0.015em]">
+            <span class="truncate">← Semaine précédente</span>
+        </a>
+        {{ else }}
+        <span class="flex min-w-[84px] max-w-[480px] items-center justify-center overflow-hidden rounded-full h-10 px-4 text-sm font-normal leading-normal text-secondary bg-gray-100">
+            Pas de semaine précédente
+        </span>
+        {{ end }}
+
+        <!-- Bouton retour à l'accueil -->
+        <a href="/"
+           class="btn-orange flex min-w-[84px] max-w-[480px] items-center justify-center overflow-hidden rounded-full h-10 px-4 text-sm font-bold leading-normal tracking-[0.015em]">
+            <span class="truncate">🏠 Accueil</span>
+        </a>
+
+        {{ if .NextInSection }}
+        <a href="{{ .NextInSection.Permalink }}"
+           class="btn-orange flex min-w-[84px] max-w-[480px] items-center justify-center overflow-hidden rounded-full h-10 px-4 text-sm font-bold leading-normal tracking-[0.015em]">
+            <span class="truncate">Semaine suivante →</span>
+        </a>
+        {{ else }}
+        <span class="flex min-w-[84px] max-w-[480px] items-center justify-center overflow-hidden rounded-full h-10 px-4 text-sm font-normal leading-normal text-secondary bg-gray-100">
+            Pas de semaine suivante
+        </span>
+        {{ end }}
+    </div>
+</div>
+
+<!-- Menu de la semaine (lundi à vendredi uniquement) -->
+{{ if .Params.weekly_menu }}
+{{ $weekdays := slice "lundi" "mardi" "mercredi" "jeudi" "vendredi" }}
+{{ range $weekdays }}
+{{ $day := . }}
+{{ if index $.Params.weekly_menu $day }}
+<h3 class="day-title text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">{{ $day | title }}</h3>
+{{ range $index, $meal := index $.Params.weekly_menu $day }}
+<p class="text-primary text-base font-normal leading-normal pb-3 pt-1 px-4">
+    Plat {{ add $index 1 }}: {{ $meal }}
+</p>
+{{ end }}
+{{ end }}
+{{ end }}
+{{ else }}
+<!-- Contenu markdown si pas de menu structuré -->
+<div class="px-4">
+    {{ .Content }}
+</div>
+{{ end }}
+
+<!-- Informations supplémentaires -->
+{{ if .Params.special_info }}
+<div class="px-4 py-4 mt-6 bg-background rounded-lg border border-custom">
+    <h4 class="text-primary text-md font-bold mb-2">Informations spéciales</h4>
+    <p class="text-primary text-sm">{{ .Params.special_info }}</p>
+</div>
+{{ end }}
+
+<!-- Section "À propos" réduite -->
+<div class="px-4 py-8 mt-8 card">
+    <h3 class="text-primary text-xl font-bold mb-4">Restaurant MRS</h3>
+    <p class="text-primary mb-4">Découvrez notre cuisine préparée avec des produits frais et de saison.</p>
+    <a href="/about/" class="text-orange hover:underline hover-lift inline-block">En savoir plus sur nous →</a>
+</div>
+{{ end }}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Menuses on MRS Restaurant</title>
+    <link>https://mrss-33d14.web.app/menus/</link>
+    <description>Recent content in Menuses on MRS Restaurant</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Fri, 21 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mrss-33d14.web.app/menus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menu de la semaine du 21 au 25 juillet</title>
+      <link>https://mrss-33d14.web.app/menus/2023/07/menu-de-la-semaine-du-21-au-25-juillet/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mrss-33d14.web.app/menus/2023/07/menu-de-la-semaine-du-21-au-25-juillet/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Ligne restaurant :&lt;/strong&gt; 03 59 61 76 86&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Menu de la semaine du 14 au 18 juillet</title>
+      <link>https://mrss-33d14.web.app/menus/2023/07/menu-de-la-semaine-du-14-au-18-juillet/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mrss-33d14.web.app/menus/2023/07/menu-de-la-semaine-du-14-au-18-juillet/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Ligne restaurant :&lt;/strong&gt; 03 59 61 76 86&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Menu de la semaine du 7 au 11 juillet</title>
+      <link>https://mrss-33d14.web.app/menus/2023/07/menu-de-la-semaine-du-7-au-11-juillet/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mrss-33d14.web.app/menus/2023/07/menu-de-la-semaine-du-7-au-11-juillet/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Ligne restaurant :&lt;/strong&gt; 03 59 61 76 86&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Menu de la semaine du 30 juin au 4 juillet</title>
+      <link>https://mrss-33d14.web.app/menus/2023/06/menu-de-la-semaine-du-30-juin-au-4-juillet/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mrss-33d14.web.app/menus/2023/06/menu-de-la-semaine-du-30-juin-au-4-juillet/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

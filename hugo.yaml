@@ -1,0 +1,50 @@
+baseURL: 'https://mrss-33d14.web.app/'
+languageCode: 'fr-FR'
+title: 'MRS Restaurant'
+
+params:
+  description: 'Restaurant MRS - Menu de la semaine'
+  logo: '/images/mrs.jpg'
+
+# Configuration des menus
+menu:
+  main:
+    - name: "Animations"
+      url: "/animations/"
+      weight: 10
+    - name: "À Propos"
+      url: "/about/"
+      weight: 20
+
+# Configuration des permaliens
+permalinks:
+  menus: '/menus/:year/:month/:slug/'
+  posts: '/blog/:slug/'
+
+# Configuration des taxonomies
+taxonomies:
+  category: categories
+  tag: tags
+  week: weeks
+
+# Configuration des sorties
+outputs:
+  home:
+    - HTML
+    - RSS
+  section:
+    - HTML
+    - RSS
+
+# Configuration des sections
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Configuration par défaut des sections
+cascade:
+  - _target:
+      path: "/content/menus/**"
+    type: "menus"
+    layout: "single"

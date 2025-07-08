@@ -1,0 +1,32 @@
+baseURL: 'https://votre-site.com'
+languageCode: 'fr-FR'
+title: 'MRS Restaurant'
+theme: 'mrs-theme'
+
+params:
+  description: 'Restaurant MRS - Menu de la semaine'
+  logo: '/images/mrs.jpg'
+
+# Configuration des menus
+menu:
+  main:
+    - name: "Accueil"
+      url: "/"
+      weight: 10
+    - name: "Animations"
+      url: "/animations/"
+      weight: 20
+    - name: "À Propos"
+      url: "/about/"
+      weight: 30
+
+# Configuration des types de contenu
+taxonomies:
+  category: categories
+  tag: tags
+  week: weeks
+
+# Configuration des permaliens
+permalinks:
+  menus: '/menus/:slug/'
+  posts: '/blog/:slug/'

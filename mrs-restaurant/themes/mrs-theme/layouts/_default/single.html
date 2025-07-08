@@ -1,0 +1,12 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="flex flex-wrap justify-between gap-3 p-4">
+    <p class="text-[#161412] tracking-light text-[32px] font-bold leading-tight min-w-72">{{ .Title }}</p>
+</div>
+
+<div class="px-4 py-6">
+    {{ .Content }}
+</div>
+
+{{ end }}

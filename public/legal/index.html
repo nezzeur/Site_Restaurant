@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRS Restaurant</title>
+    <meta name="description" content="Restaurant MRS - Menu de la semaine">
+
+    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-mrs-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/logo-mrs-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+          href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;700;800">
+
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+
+    <style>
+         
+        :root {
+            --color-orange: #f53c28;
+            --color-orange-hover: #e02c1a;
+            --color-primary: #161412;
+            --color-secondary: #81766a;
+            --color-background: #f9f8f7;
+            --color-border: #f4f2f1;
+        }
+
+         
+        .text-orange { color: var(--color-orange) !important; }
+        .text-primary { color: var(--color-primary) !important; }
+        .text-secondary { color: var(--color-secondary) !important; }
+        .bg-orange { background-color: var(--color-orange) !important; }
+        .bg-background { background-color: var(--color-background) !important; }
+        .border-custom { border-color: var(--color-border) !important; }
+
+         
+        a, button, [role="button"], .cursor-pointer {
+            cursor: pointer !important;
+        }
+
+        a:hover, button:hover, [role="button"]:hover {
+            cursor: pointer !important;
+        }
+
+         
+        header h2, header a {
+            color: var(--color-orange) !important;
+        }
+
+        header .logo svg, header .logo img {
+            transition: opacity 0.3s ease;
+        }
+
+        header .logo:hover svg, header .logo:hover img {
+            opacity: 0.8;
+        }
+
+         
+        header nav a {
+            color: var(--color-primary) !important;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: var(--color-orange) !important;
+            text-decoration: underline;
+        }
+
+        header nav a.active {
+            color: var(--color-orange) !important;
+            font-weight: bold;
+        }
+
+         
+        h1, .title-main {
+            color: var(--color-orange) !important;
+        }
+
+         
+        h3.day-title {
+            color: var(--color-orange) !important;
+        }
+
+         
+        h3.date-range {
+            color: var(--color-primary) !important;
+        }
+
+         
+        .btn-orange {
+            background-color: var(--color-orange) !important;
+            color: white !important;
+            cursor: pointer !important;
+            transition: background-color 0.3s ease;
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn-orange:hover {
+            background-color: var(--color-orange-hover) !important;
+            cursor: pointer !important;
+        }
+
+         
+        .nav-button {
+            background-color: var(--color-orange) !important;
+            color: white !important;
+            cursor: pointer !important;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background-color: var(--color-orange-hover) !important;
+        }
+
+         
+        footer p, footer a {
+            color: var(--color-secondary) !important;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--color-orange) !important;
+            text-decoration: underline;
+        }
+
+         
+        header {
+            border-bottom: 2px solid var(--color-orange) !important;
+        }
+
+         
+        .card {
+            background-color: var(--color-background);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+         
+        .hover-lift {
+            transition: transform 0.2s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+
+    
+</head>
+<body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+         style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+
+        <div class="layout-container flex h-full grow flex-col">
+            
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-solid px-10 py-3">
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16">
+                        <a href="https://mrss-33d14.web.app/" class="logo">
+                            
+                            <img src="/images/mrs.jpg" alt="Logo MRS"
+                                 style="width: 100%; height: 100%; object-fit: contain; border-radius: 6px;">
+                            
+                        </a>
+                    </div>
+                </div>
+
+                <nav class="flex flex-1 justify-end gap-8">
+                    <div class="flex items-center gap-9">
+                        
+                        <a class="text-primary text-sm font-medium leading-normal "
+                           href="/animations/">Animations</a>
+                        
+                        <a class="text-primary text-sm font-medium leading-normal "
+                           href="/about/">À Propos</a>
+                        
+                    </div>
+                </nav>
+            </header>
+
+            
+            <main class="px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    
+<div class="flex flex-wrap justify-between gap-3 p-4">
+    <h1 class="text-orange tracking-light text-[32px] font-bold leading-tight min-w-72">Mentions légales</h1>
+</div>
+
+<div class="px-4 py-6">
+    <div class="legal-content max-w-3xl mx-auto px-4 py-8">
+<h2 id="éditeur-de-la-plateforme">Éditeur de la plateforme</h2>
+<p><strong>Peru Noa</strong>, créateur et éditeur du site.</p>
+<h2 id="directeur-de-la-publication">Directeur de la publication</h2>
+<p><strong>Peru Noa</strong>, créateur et responsable du contenu du site.</p>
+<h2 id="hébergement">Hébergement</h2>
+<p>Le Site est hébergé sur <strong>Firebase</strong> (Google Ireland Limited)<br>
+📍 Barrow Street, 99132 DUBLIN (Irlande)</p>
+<h2 id="contact">Contact</h2>
+<div class="contact-items mt-6 space-y-4">
+  <div class="flex items-center">
+    <span class="text-orange-500 mr-3">✉️</span>
+    <a href="mailto:noaperu3@gmail.com" class="contact-link hover:underline flex items-center">
+      <span class="font-medium">noaperu3@gmail.com</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    </a>
+  </div>
+  <div class="flex items-center">
+    <span class="text-orange-500 mr-3">📞</span>
+    <a href="tel:+33636919288" class="contact-link hover:underline flex items-center">
+      <span class="font-medium">06 36 91 92 88</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      </svg>
+    </a>
+  </div>
+</div>
+</div>
+<style>
+.legal-content {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+.legal-content h1 {
+  color: #f53c28;
+  border-bottom: 2px solid #f53c28;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.legal-content h2 {
+  color: #f53c28;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+.contact-link {
+  color: #f53c28;
+  transition: all 0.2s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.contact-link:hover {
+  color: #d13424;
+  background-color: rgba(245, 60, 40, 0.05);
+  text-decoration: none;
+}
+
+.contact-items a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.hover\:underline:hover {
+  text-decoration: underline;
+}
+</style>
+
+    <div class="grid gap-6">
+        
+    </div>
+</div>
+
+                </div>
+            </main>
+
+            
+            <footer class="flex justify-center">
+                <div class="flex max-w-[960px] flex-1 flex-col">
+                    <div class="flex flex-col gap-6 px-5 py-10 text-center">
+                        <div class="flex flex-wrap items-center justify-center gap-6">
+                            <p class="text-secondary text-base font-normal leading-normal">© 2025 MRS Restaurant.</p>
+                        </div>
+                        <div class="flex justify-center gap-6">
+                            <a class="text-secondary text-base font-normal leading-normal hover:text-orange transition-colors duration-300" href="/legal/">Mentions légales</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

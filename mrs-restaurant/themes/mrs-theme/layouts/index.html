@@ -1,0 +1,94 @@
+{{ define "title" }}{{ .Site.Title }} - Menu de la semaine{{ end }}
+
+{{ define "main" }}
+<div class="flex flex-wrap justify-between gap-3 p-4">
+    <p class="text-[#161412] tracking-light text-[32px] font-bold leading-tight min-w-72">Menu de la semaine</p>
+</div>
+
+{{ $currentMenu := where .Site.RegularPages "Type" "menus" | first 1 }}
+{{ range $currentMenu }}
+    {{ if .Params.week_start }}
+    <h3 class="text-[#161412] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
+        Semaine du {{ .Params.week_start }} au {{ .Params.week_end }}
+    </h3>
+    {{ end }}
+
+    <!-- Navigation semaines -->
+    <div class="flex justify-stretch">
+        <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-between">
+            {{ if .PrevInSection }}
+            <a href="{{ .PrevInSection.Permalink }}"
+               class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f2f1] text-[#161412] text-sm font-bold leading-normal tracking-[0.015em]">
+                <span class="truncate">←</span>
+            </a>
+            {{ else }}
+            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f2f1] text-[#161412] text-sm font-bold leading-normal tracking-[0.015em]">
+                <span class="truncate">←</span>
+            </button>
+            {{ end }}
+
+            {{ if .NextInSection }}
+            <a href="{{ .NextInSection.Permalink }}"
+               class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f2f1] text-[#161412] text-sm font-bold leading-normal tracking-[0.015em]">
+                <span class="truncate">→</span>
+            </a>
+            {{ else }}
+            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f2f1] text-[#161412] text-sm font-bold leading-normal tracking-[0.015em]">
+                <span class="truncate">→</span>
+            </button>
+            {{ end }}
+        </div>
+    </div>
+
+    <!-- Menu de la semaine -->
+    {{ if .Params.weekly_menu }}
+    {{ $weekdays := slice "lundi" "mardi" "mercredi" "jeudi" "vendredi" "samedi" "dimanche" }}
+    {{ range $weekdays }}
+    {{ $day := . }}
+    {{ if index $.Params.weekly_menu $day }}
+    <h3 class="text-[#161412] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">{{ $day | title }}</h3>
+    {{ range $index, $meal := index $.Params.weekly_menu $day }}
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">
+        Plat {{ add $index 1 }}: {{ $meal }}
+    </p>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+{{ else }}
+    <!-- Menu par défaut si aucun menu n'existe -->
+    <h3 class="text-[#161412] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Semaine du 24 au 30 juin</h3>
+    <div class="flex justify-stretch">
+        <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-between">
+            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f2f1] text-[#161412] text-sm font-bold leading-normal tracking-[0.015em]">
+                <span class="truncate">←</span>
+            </button>
+            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f2f1] text-[#161412] text-sm font-bold leading-normal tracking-[0.015em]">
+                <span class="truncate">→</span>
+            </button>
+        </div>
+    </div>
+    <h3 class="text-[#161412] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Lundi</h3>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 1: Salade de quinoa aux légumes frais</p>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 2: Poulet grillé aux herbes de Provence</p>
+    <h3 class="text-[#161412] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Mardi</h3>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 1: Soupe de lentilles corail</p>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 2: Saumon à la plancha avec riz basmati</p>
+    <h3 class="text-[#161412] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Mercredi</h3>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 1: Taboulé aux fruits de mer</p>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 2: Végétarien: Curry de légumes au lait de coco</p>
+    <h3 class="text-[#161412] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Jeudi</h3>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 1: Gaspacho andalou</p>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 2: Brochettes de bœuf marinées</p>
+    <h3 class="text-[#161412] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Vendredi</h3>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 1: Salade niçoise revisitée</p>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 2: Poisson du jour en papillote</p>
+    <h3 class="text-[#161412] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Samedi</h3>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 1: Salade de pâtes aux tomates séchées</p>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 2: Magret de canard aux cerises</p>
+    <h3 class="text-[#161412] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Dimanche</h3>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 1: Salade de riz sauvage aux champignons</p>
+    <p class="text-[#161412] text-base font-normal leading-normal pb-3 pt-1 px-4">Plat 2: Poulet rôti aux herbes aromatiques</p>
+{{ end }}
+
+{{ end }}
