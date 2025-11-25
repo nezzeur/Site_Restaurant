@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 25/08 AU 29/08/2025"
-date: 2023-08-25T00:00:00Z
-week_start: "2023-08-25"
-week_end: "2023-08-29"
+date: 2025-08-25T00:00:00Z
+week_start: "2025-08-25"
+week_end: "2025-08-29"
 weekly_menu:
     lundi:
     - "Colombo de porc 3,91€"

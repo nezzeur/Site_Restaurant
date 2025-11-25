@@ -18,7 +18,7 @@ menu:
 
 # Configuration des permaliens
 permalinks:
-  menus: '/menus/:year/:month/:slug/'
+  menus: '/menus/:slug/'
   posts: '/blog/:slug/'
 
 # Configuration des taxonomies

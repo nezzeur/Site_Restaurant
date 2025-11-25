@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 15/09 AU 19/09/2025"
-date: 2023-09-15T00:00:00Z
-week_start: "2023-09-15"
-week_end: "2023-09-19"
+date: 2025-09-15T00:00:00Z
+week_start: "2025-09-15"
+week_end: "2025-09-19"
 weekly_menu:
     lundi:
     - "Sauté de porc au spéculoos 3,96€"

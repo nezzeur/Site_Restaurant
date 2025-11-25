@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 01/09 AU 05/09/2025"
-date: 2023-09-01T00:00:00Z
-week_start: "2023-09-01"
-week_end: "2023-09-05"
+date: 2025-09-01T00:00:00Z
+week_start: "2025-09-01"
+week_end: "2025-09-05"
 weekly_menu:
     lundi:
     - "Mijoté de saucisses 3,55€"

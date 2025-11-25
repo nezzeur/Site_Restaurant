@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 03/11 AU 07/11/2025"
-date: 2023-11-03T00:00:00Z
-week_start: "2023-11-03"
-week_end: "2023-11-07"
+date: 2025-11-03T00:00:00Z
+week_start: "2025-11-03"
+week_end: "2025-11-07"
 weekly_menu:
     lundi:
     - "Rougail saucisses 3,55€"

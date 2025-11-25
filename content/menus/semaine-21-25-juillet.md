@@ -1,8 +1,8 @@
 ---
 title: "Menu de la semaine du 21 au 25 juillet"
-date: 2023-07-21T00:00:00Z
-week_start: "2023-07-21"
-week_end: "2023-07-25"
+date: 2025-07-21T00:00:00Z
+week_start: "2025-07-21"
+week_end: "2025-07-25"
 weekly_menu:
   lundi:
     - "Kebab en assiette sauce pita 3,91€"

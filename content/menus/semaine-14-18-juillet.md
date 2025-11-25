@@ -1,8 +1,8 @@
 ---
 title: "Menu de la semaine du 14 au 18 juillet"
-date: 2023-07-14T00:00:00Z
-week_start: "2023-07-14"
-week_end: "2023-07-18"
+date: 2025-07-14T00:00:00Z
+week_start: "2025-07-14"
+week_end: "2025-07-18"
 weekly_menu:
   lundi:
     - "FÉRIÉ"

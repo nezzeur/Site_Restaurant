@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 17/11 AU 21/11/2025"
-date: 2023-11-17T00:00:00Z
-week_start: "2023-11-17"
-week_end: "2023-11-21"
+date: 2025-11-17T00:00:00Z
+week_start: "2025-11-17"
+week_end: "2025-11-21"
 weekly_menu:
     lundi:
     - "Chakchouka boulettes de bœuf 3,96€"

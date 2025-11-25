@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 13/10 AU 17/10/2025"
-date: 2023-10-13T00:00:00Z
-week_start: "2023-10-13"
-week_end: "2023-10-17"
+date: 2025-10-13T00:00:00Z
+week_start: "2025-10-13"
+week_end: "2025-10-17"
 weekly_menu:
     lundi:
     - "**TOUS À TABLE**" # Vert clair sur l'image

@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 10/11 AU 14/11/2025"
-date: 2023-11-10T00:00:00Z
-week_start: "2023-11-10"
-week_end: "2023-11-14"
+date: 2025-11-10T00:00:00Z
+week_start: "2025-11-10"
+week_end: "2025-11-14"
 weekly_menu:
     lundi:
     - "Escalope Viennoise sauce suprême 4,24€"

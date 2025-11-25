@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 06/10 AU 10/10/2025"
-date: 2023-10-06T00:00:00Z
-week_start: "2023-10-06"
-week_end: "2023-10-10"
+date: 2025-10-06T00:00:00Z
+week_start: "2025-10-06"
+week_end: "2025-10-10"
 weekly_menu:
     lundi:
     - "Tajine de poulet 3,96€"

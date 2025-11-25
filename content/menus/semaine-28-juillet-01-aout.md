@@ -1,8 +1,8 @@
 ---
 title: "Menu de la semaine du 28 juillet au 1 août"
-date: 2023-07-28T00:00:00Z
-week_start: "2023-07-28"
-week_end: "2023-08-01"
+date: 2025-07-28T00:00:00Z
+week_start: "2025-07-28"
+week_end: "2025-08-01"
 weekly_menu:
   lundi:
     - "Cuisse de poulet rôtie Tandoori 3,91€"

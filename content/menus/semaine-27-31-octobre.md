@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 27/10 AU 31/10/2025"
-date: 2023-10-27T00:00:00Z
-week_start: "2023-10-27"
-week_end: "2023-10-31"
+date: 2025-10-27T00:00:00Z
+week_start: "2025-10-27"
+week_end: "2025-10-31"
 weekly_menu:
     lundi:
     - "Couscous Royal 4,24€"

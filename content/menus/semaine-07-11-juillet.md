@@ -1,8 +1,8 @@
 ---
 title: "Menu de la semaine du 7 au 11 juillet"
-date: 2023-07-07T00:00:00Z
-week_start: "2023-07-07"
-week_end: "2023-07-11"
+date: 2025-07-07T00:00:00Z
+week_start: "2025-07-07"
+week_end: "2025-07-11"
 weekly_menu:
   lundi:
     - "Escalope de porc sauce brune 3,91€"

@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 18/08 AU 22/08/2025"
-date: 2023-08-18T00:00:00Z
-week_start: "2023-08-18"
-week_end: "2023-08-22"
+date: 2025-08-18T00:00:00Z
+week_start: "2025-08-18"
+week_end: "2025-08-22"
 weekly_menu:
     lundi:
     - "Rôti de porc, sauce curry 3,91€"

@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 11/08 AU 15/08/2025"
-date: 2023-08-11T00:00:00Z
-week_start: "2023-08-11"
-week_end: "2023-08-15"
+date: 2025-08-11T00:00:00Z
+week_start: "2025-08-11"
+week_end: "2025-08-15"
 weekly_menu:
     lundi:
     - "Escalope Viennoise, sauce champignons 4,19€"

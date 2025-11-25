@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 08/09 AU 12/09/2025"
-date: 2023-09-08T00:00:00Z
-week_start: "2023-09-08"
-week_end: "2023-09-12"
+date: 2025-09-08T00:00:00Z
+week_start: "2025-09-08"
+week_end: "2025-09-12"
 weekly_menu:
     lundi:
     - "Andouillette 3,55€ Ou Suprême de poulet Sauce Maroilles 3,96€"

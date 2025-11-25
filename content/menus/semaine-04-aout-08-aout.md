@@ -1,8 +1,8 @@
 ---
 title: "Menu de la semaine du 4 août au 8 août"
-date: 2023-08-04T00:00:00Z
-week_start: "2023-08-04"
-week_end: "2023-08-08"
+date: 2025-08-04T00:00:00Z
+week_start: "2025-08-04"
+week_end: "2025-08-08"
 weekly_menu:
   lundi:
     - "Sauté de porc à la créole 3,91€"

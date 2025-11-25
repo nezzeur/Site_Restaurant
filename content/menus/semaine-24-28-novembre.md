@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 24/11 AU 28/11/2025"
-date: 2023-11-24T00:00:00Z
-week_start: "2023-11-24"
-week_end: "2023-11-28"
+date: 2025-11-24T00:00:00Z
+week_start: "2025-11-24"
+week_end: "2025-11-28"
 weekly_menu:
     lundi:
     - "Saucisses lentilles 3,55€"

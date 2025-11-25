@@ -1,8 +1,8 @@
 ---
 title: "Menu de la semaine du 30 juin au 4 juillet"
-date: 2023-06-30T00:00:00Z
-week_start: "2023-06-30"
-week_end: "2023-07-04"
+date: 2025-06-30T00:00:00Z
+week_start: "2025-06-30"
+week_end: "2025-07-04"
 weekly_menu:
   lundi:
     - "Rougail saucisses 3,50€"

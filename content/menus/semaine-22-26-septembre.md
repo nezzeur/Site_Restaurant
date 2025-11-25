@@ -1,8 +1,8 @@
 ---
 title: "MENU DU 22/09 AU 26/09/2025"
-date: 2023-09-22T00:00:00Z
-week_start: "2023-09-22"
-week_end: "2023-09-26"
+date: 2025-09-22T00:00:00Z
+week_start: "2025-09-22"
+week_end: "2025-09-26"
 weekly_menu:
     lundi:
     - "Rougail Saucisses 3,55€"
