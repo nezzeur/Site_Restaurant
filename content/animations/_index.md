@@ -68,25 +68,36 @@ draft: false
     <h2 class="text-xl font-bold text-orange-600 mb-2">SEPTEMBRE</h2>
     <h3 class="text-lg font-semibold mb-4">Douceurs d'automne</h3>
     <div class="bg-gray-100 rounded-lg p-8 text-center text-gray-500">
-      Coming soon...
-    </div>
+    <img src="/imagesAnimations/DOUCEUR-D_AUTOMNE.avif" alt="Street Food" class="w-full h-auto rounded-lg">
+
+
   </div>
 </div>
-
+</div>
 <!-- Octobre -->
 <div class="animation-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
   <div class="p-6">
     <h2 class="text-xl font-bold text-orange-600 mb-2">OCTOBRE</h2>
-    <h3 class="text-lg font-semibold mb-4">Tous à Table !</h3>
+    <h3 class="text-lg font-semibold mb-4">Octobre Rose</h3>
     <div class="bg-gray-100 rounded-lg p-8 text-center text-gray-500">
-      Coming soon...
+        <img src="/imagesAnimations/OCTOBRE-ROSE.svg" alt="Street Food" class="w-full h-auto rounded-lg">
     </div>
   </div>
 </div>
 
+<!-- novembre -->
+<div class="animation-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+  <div class="p-6">
+    <h2 class="text-xl font-bold text-orange-600 mb-2">NOVEMBRE</h2>
+    <h3 class="text-lg font-semibold mb-4">Comme chez mamie</h3>
+    <div class="bg-gray-100 rounded-lg p-8 text-center text-gray-500">
+        <img src="/imagesAnimations/COMME-CHEZ-MAMIE.svg" alt="Street Food" class="w-full h-auto rounded-lg">
+    </div>
+  </div>
 </div>
 
-</div>
+
+
 
 <style>
 .animations-page {
