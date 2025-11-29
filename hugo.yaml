@@ -1,6 +1,7 @@
 baseURL: 'https://mrss-33d14.web.app/'
 languageCode: 'fr-FR'
 title: 'MRS Restaurant'
+buildFuture: true
 
 params:
   description: 'Restaurant MRS - Menu de la semaine'
