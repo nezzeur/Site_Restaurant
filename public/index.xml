@@ -2,199 +2,206 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Accueil on MRS Restaurant</title>
-    <link>http://localhost:1313/</link>
+    <link>https://mrss-33d14.web.app/</link>
     <description>Recent content in Accueil on MRS Restaurant</description>
     <generator>Hugo</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 29 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mrss-33d14.web.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MENU DU 19/01 AU 23/01/2026</title>
+      <link>https://mrss-33d14.web.app/menus/menu-du-19/01-au-23/01/2026/</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-19/01-au-23/01/2026/</guid>
+      <description></description>
+    </item>
     <item>
       <title>MENU DU 29/12 AU 02/01/2026</title>
-      <link>http://localhost:1313/menus/menu-du-29/12-au-02/01/2026/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-29/12-au-02/01/2026/</link>
       <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-29/12-au-02/01/2026/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-29/12-au-02/01/2026/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 22/12 AU 26/12/2025</title>
-      <link>http://localhost:1313/menus/menu-du-22/12-au-26/12/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-22/12-au-26/12/2025/</link>
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-22/12-au-26/12/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-22/12-au-26/12/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 15/12 AU 19/12/2025</title>
-      <link>http://localhost:1313/menus/menu-du-15/12-au-19/12/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-15/12-au-19/12/2025/</link>
       <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-15/12-au-19/12/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-15/12-au-19/12/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 08/12 AU 12/12/2025</title>
-      <link>http://localhost:1313/menus/menu-du-08/12-au-12/12/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-08/12-au-12/12/2025/</link>
       <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-08/12-au-12/12/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-08/12-au-12/12/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 01/12 AU 05/12/2025</title>
-      <link>http://localhost:1313/menus/menu-du-01/12-au-05/12/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-01/12-au-05/12/2025/</link>
       <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-01/12-au-05/12/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-01/12-au-05/12/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 24/11 AU 28/11/2025</title>
-      <link>http://localhost:1313/menus/menu-du-24/11-au-28/11/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-24/11-au-28/11/2025/</link>
       <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-24/11-au-28/11/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-24/11-au-28/11/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 17/11 AU 21/11/2025</title>
-      <link>http://localhost:1313/menus/menu-du-17/11-au-21/11/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-17/11-au-21/11/2025/</link>
       <pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-17/11-au-21/11/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-17/11-au-21/11/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 10/11 AU 14/11/2025</title>
-      <link>http://localhost:1313/menus/menu-du-10/11-au-14/11/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-10/11-au-14/11/2025/</link>
       <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-10/11-au-14/11/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-10/11-au-14/11/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 03/11 AU 07/11/2025</title>
-      <link>http://localhost:1313/menus/menu-du-03/11-au-07/11/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-03/11-au-07/11/2025/</link>
       <pubDate>Mon, 03 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-03/11-au-07/11/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-03/11-au-07/11/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 27/10 AU 31/10/2025</title>
-      <link>http://localhost:1313/menus/menu-du-27/10-au-31/10/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-27/10-au-31/10/2025/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-27/10-au-31/10/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-27/10-au-31/10/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 20/10 AU 24/10/2025</title>
-      <link>http://localhost:1313/menus/menu-du-20/10-au-24/10/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-20/10-au-24/10/2025/</link>
       <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-20/10-au-24/10/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-20/10-au-24/10/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 13/10 AU 17/10/2025</title>
-      <link>http://localhost:1313/menus/menu-du-13/10-au-17/10/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-13/10-au-17/10/2025/</link>
       <pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-13/10-au-17/10/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-13/10-au-17/10/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 06/10 AU 10/10/2025</title>
-      <link>http://localhost:1313/menus/menu-du-06/10-au-10/10/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-06/10-au-10/10/2025/</link>
       <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-06/10-au-10/10/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-06/10-au-10/10/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 29/09 AU 03/10/2025</title>
-      <link>http://localhost:1313/menus/menu-du-29/09-au-03/10/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-29/09-au-03/10/2025/</link>
       <pubDate>Mon, 29 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-29/09-au-03/10/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-29/09-au-03/10/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 22/09 AU 26/09/2025</title>
-      <link>http://localhost:1313/menus/menu-du-22/09-au-26/09/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-22/09-au-26/09/2025/</link>
       <pubDate>Mon, 22 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-22/09-au-26/09/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-22/09-au-26/09/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 15/09 AU 19/09/2025</title>
-      <link>http://localhost:1313/menus/menu-du-15/09-au-19/09/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-15/09-au-19/09/2025/</link>
       <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-15/09-au-19/09/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-15/09-au-19/09/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 08/09 AU 12/09/2025</title>
-      <link>http://localhost:1313/menus/menu-du-08/09-au-12/09/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-08/09-au-12/09/2025/</link>
       <pubDate>Mon, 08 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-08/09-au-12/09/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-08/09-au-12/09/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 01/09 AU 05/09/2025</title>
-      <link>http://localhost:1313/menus/menu-du-01/09-au-05/09/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-01/09-au-05/09/2025/</link>
       <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-01/09-au-05/09/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-01/09-au-05/09/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 25/08 AU 29/08/2025</title>
-      <link>http://localhost:1313/menus/menu-du-25/08-au-29/08/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-25/08-au-29/08/2025/</link>
       <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-25/08-au-29/08/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-25/08-au-29/08/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 18/08 AU 22/08/2025</title>
-      <link>http://localhost:1313/menus/menu-du-18/08-au-22/08/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-18/08-au-22/08/2025/</link>
       <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-18/08-au-22/08/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-18/08-au-22/08/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>MENU DU 11/08 AU 15/08/2025</title>
-      <link>http://localhost:1313/menus/menu-du-11/08-au-15/08/2025/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-du-11/08-au-15/08/2025/</link>
       <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-du-11/08-au-15/08/2025/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-du-11/08-au-15/08/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>Menu de la semaine du 4 août au 8 août</title>
-      <link>http://localhost:1313/menus/menu-de-la-semaine-du-4-ao%C3%BBt-au-8-ao%C3%BBt/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-de-la-semaine-du-4-ao%C3%BBt-au-8-ao%C3%BBt/</link>
       <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-de-la-semaine-du-4-ao%C3%BBt-au-8-ao%C3%BBt/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-de-la-semaine-du-4-ao%C3%BBt-au-8-ao%C3%BBt/</guid>
       <description></description>
     </item>
     <item>
       <title>Menu de la semaine du 28 juillet au 1 août</title>
-      <link>http://localhost:1313/menus/menu-de-la-semaine-du-28-juillet-au-1-ao%C3%BBt/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-de-la-semaine-du-28-juillet-au-1-ao%C3%BBt/</link>
       <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-de-la-semaine-du-28-juillet-au-1-ao%C3%BBt/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-de-la-semaine-du-28-juillet-au-1-ao%C3%BBt/</guid>
       <description></description>
     </item>
     <item>
       <title>Menu de la semaine du 21 au 25 juillet</title>
-      <link>http://localhost:1313/menus/menu-de-la-semaine-du-21-au-25-juillet/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-de-la-semaine-du-21-au-25-juillet/</link>
       <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-de-la-semaine-du-21-au-25-juillet/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-de-la-semaine-du-21-au-25-juillet/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Ligne restaurant :&lt;/strong&gt; 03 59 61 76 86&lt;/p&gt;</description>
     </item>
     <item>
       <title>Menu de la semaine du 14 au 18 juillet</title>
-      <link>http://localhost:1313/menus/menu-de-la-semaine-du-14-au-18-juillet/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-de-la-semaine-du-14-au-18-juillet/</link>
       <pubDate>Mon, 14 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-de-la-semaine-du-14-au-18-juillet/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-de-la-semaine-du-14-au-18-juillet/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Ligne restaurant :&lt;/strong&gt; 03 59 61 76 86&lt;/p&gt;</description>
     </item>
     <item>
       <title>Menu de la semaine du 7 au 11 juillet</title>
-      <link>http://localhost:1313/menus/menu-de-la-semaine-du-7-au-11-juillet/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-de-la-semaine-du-7-au-11-juillet/</link>
       <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-de-la-semaine-du-7-au-11-juillet/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-de-la-semaine-du-7-au-11-juillet/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Ligne restaurant :&lt;/strong&gt; 03 59 61 76 86&lt;/p&gt;</description>
     </item>
     <item>
       <title>Menu de la semaine du 30 juin au 4 juillet</title>
-      <link>http://localhost:1313/menus/menu-de-la-semaine-du-30-juin-au-4-juillet/</link>
+      <link>https://mrss-33d14.web.app/menus/menu-de-la-semaine-du-30-juin-au-4-juillet/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/menus/menu-de-la-semaine-du-30-juin-au-4-juillet/</guid>
+      <guid>https://mrss-33d14.web.app/menus/menu-de-la-semaine-du-30-juin-au-4-juillet/</guid>
       <description></description>
     </item>
   </channel>
