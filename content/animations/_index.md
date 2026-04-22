@@ -28,12 +28,9 @@ draft: false
 
 <div class="animation-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
   <div class="p-6">
-    <h2 class="text-xl font-bold text-orange-600 mb-2">MARS</h2>
-    <h3 class="text-lg font-semibold">Italie Centrale</h3>
-    <p class="text-gray-600 mb-4">Goûts de Toscane & Ombrie</p>
-    <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 font-medium">
-      À venir
-    </div>
+    <h2 class="text-xl font-bold text-orange-600 mb-2">Mars </h2>
+    <h3 class="text-lg font-semibold mb-4">Menu Italien</h3>
+    <img src="/imagesAnimations/Italie-Mars-2026.avif" alt="Menu Italien" class="w-full h-auto rounded-lg">
   </div>
 </div>
 
@@ -42,9 +39,7 @@ draft: false
     <h2 class="text-xl font-bold text-orange-600 mb-2">AVRIL</h2>
     <h3 class="text-lg font-semibold">Italie Romaine</h3>
     <p class="text-gray-600 mb-4">Délices de Rome & du Latium</p>
-    <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 font-medium">
-      À venir
-    </div>
+    <img src="/imagesAnimations/italie_avril_2026.avif" alt="Menu nouvel an chinois" class="w-full h-auto rounded-lg">
   </div>
 </div>
 
